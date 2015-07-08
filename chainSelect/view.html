@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css" media="screen" title="no title" charset="utf-8">
+    <title>chain select</title>
+  </head>
+  <body>
+    <div ng-app="chain" ng-controller="chainSelect">
+  <select ng-model="family" ng-options="th.family for th in thrones">
+     <option value="" selected>pick one family</option>
+   </select>
+    <br>
+   <select ng-model="member" ng-options="me.name for me in family.member">
+      <option value="" selected>pick one member</option>
+   </select>
+ </div>
+ <script src="./chain.js" charset="utf-8"></script>
+  </body>
+</html>
