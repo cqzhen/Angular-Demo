@@ -1,0 +1,11 @@
+{
+  "name": "Angular-Demo",
+  "description": "Practice and Demo of Angular",
+  "version": "0.0.0",
+  "license": "MIT",
+  "repository": "shangwenmo/Angular-Demo",
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "gulp": "^3.8.11"
+  }
+}
