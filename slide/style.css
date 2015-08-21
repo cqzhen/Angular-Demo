@@ -1,0 +1,44 @@
+.container {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  overflow: hidden;
+}
+
+.img-container {
+  position: relative;
+  min-width: 1800px;
+  min-height: 600px;
+  transition: all ease-out 0.3s;
+}
+
+.img-container img {
+  max-width: 600px;
+  max-height: 600px;
+}
+
+.container ol {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+  list-style: none;
+}
+
+.container ol li {
+  display: inline-block;
+  width: 15px;
+  background-color: #1e89e0;
+  color: #fff;
+  font-size: 12px;
+  padding: 0 1px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.container .active {
+  background-color: #fff;
+  color: #1e89e0;
+}
