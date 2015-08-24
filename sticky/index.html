@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="sticky">
+  <head>
+    <meta charset="utf-8">
+    <title>sticky</title>
+    <link rel="stylesheet" href="./sticky.css" media="screen" charset="utf-8">
+  </head>
+  <body>
+    <header></header>
+    <section ng-controller="navSticky">
+      <div ng-repeat="nav in navList">
+        
+        <ele-nav></ele-nav>
+
+      </div>
+    </section>
+
+    <footer></footer>
+    <script src="../public/js/angular.js" charset="utf-8"></script>
+    <script src="./sticky.js" charset="utf-8"></script>
+  </body>
+</html>
