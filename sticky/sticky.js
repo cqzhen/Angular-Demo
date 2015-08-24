@@ -19,11 +19,11 @@ angular.module('sticky', [])
 
     // fixed height
     $scope.cardHeight = 500;
-    
+
   }])
   .directive('eleNav', function($window) {
       var nav = {
-        template: '<nav ng-model="nav.id" ng-class="{sticky:isSticky}"><h1 ng-bind="nav.title"></h1><p ng-bind="isSticky"></p></nav>',
+        template: '<nav ng-model="nav.id" ng-class="{sticky:isSticky}"><h1 ng-bind="nav.title"></h1><nav>',
         replace: true,
         scope: false,
         controller: function($scope, $element) {
