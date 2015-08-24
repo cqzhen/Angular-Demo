@@ -17,19 +17,20 @@ angular.module('sticky', [])
 
     $scope.navOffsetY = [];
 
+    // fixed height
     $scope.cardHeight = 500;
+    
   }])
   .directive('eleNav', function($window) {
       var nav = {
         template: '<nav ng-model="nav.id" ng-class="{sticky:isSticky}"><h1 ng-bind="nav.title"></h1><p ng-bind="isSticky"></p></nav>',
         replace: true,
         scope: false,
-        controller: function($scope, $element, $window) {
+        controller: function($scope, $element) {
           $scope.isSticky = false;
           $scope.navOffsetY.push($element.prop('offsetTop'));
-
         },
-        link: function (scope, element, attrs) {
+        link: function (scope) {
           angular.element($window).bind('scroll', function() {
             if (this.pageYOffset >= scope.navOffsetY[scope.nav.id] && this.pageYOffset < (scope.navOffsetY[scope.nav.id] + scope.cardHeight)) {
               scope.isSticky = true;
